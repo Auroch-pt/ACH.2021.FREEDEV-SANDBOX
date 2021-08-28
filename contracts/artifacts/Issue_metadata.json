@@ -7,12 +7,69 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "author",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "category",
 				"outputs": [
 					{
 						"internalType": "enum Issue.Category",
 						"name": "",
 						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "closing_time",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "countdown",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creation_time",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -95,6 +152,32 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "status",
+				"outputs": [
+					{
+						"internalType": "enum Issue.IssueStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "technology",
+				"outputs": [
+					{
+						"internalType": "enum Issue.Technology",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -125,11 +208,11 @@
 	},
 	"sources": {
 		"contracts/issue.sol": {
-			"keccak256": "0xdff7727191cffb1f85694e648d43c4ce36ef7d213227a99f0e4ef754928083e2",
+			"keccak256": "0x815c9b4a53439265aca4e8e6ac0b35952f453321d7fd411160be411ab17b0a74",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://58a942b1a5babd5d3c9211884a568a7615d28cf6604357403f6d72e7ad83ce76",
-				"dweb:/ipfs/QmUXhojsxXqqedeN8kM6RRTuLP9sxrtaoJFLM8shrJxQkR"
+				"bzz-raw://39a181e52408ca2aedb49a171ceb394299465e63170e21ca79b17b9b158ad4c5",
+				"dweb:/ipfs/QmexoZG79QEt9vZoe9XV1ViThsfApanpAtqUvr7qxmwR9J"
 			]
 		}
 	},
