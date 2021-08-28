@@ -178,6 +178,10 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -208,11 +212,11 @@
 	},
 	"sources": {
 		"contracts/issue.sol": {
-			"keccak256": "0x815c9b4a53439265aca4e8e6ac0b35952f453321d7fd411160be411ab17b0a74",
+			"keccak256": "0x5240f806c5ba51d376d3624ca6311db169027cceb19e17c4f192e89a96447778",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://39a181e52408ca2aedb49a171ceb394299465e63170e21ca79b17b9b158ad4c5",
-				"dweb:/ipfs/QmexoZG79QEt9vZoe9XV1ViThsfApanpAtqUvr7qxmwR9J"
+				"bzz-raw://e8a7a98558f1c4b5560ffb241ae31d854586d89fa70a8787e131058f7be15b52",
+				"dweb:/ipfs/QmeCTMP3PANYV4C1YwF9T91qNUhz9eWySXvHSMfGAMJaHe"
 			]
 		}
 	},

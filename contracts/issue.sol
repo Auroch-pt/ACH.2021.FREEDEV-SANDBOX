@@ -29,4 +29,8 @@ contract Issue {
     constructor() {
         author = msg.sender;
     }
+    
+    receive() payable external {
+        
+    }
 }
