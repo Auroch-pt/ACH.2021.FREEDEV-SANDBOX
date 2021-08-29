@@ -197,7 +197,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/issue.sol": "Issue"
+			"contracts/Issue.sol": "Issue"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -211,7 +211,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/issue.sol": {
+		"contracts/Issue.sol": {
 			"keccak256": "0x5240f806c5ba51d376d3624ca6311db169027cceb19e17c4f192e89a96447778",
 			"license": "MIT",
 			"urls": [
