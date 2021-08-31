@@ -1,16 +1,34 @@
 {
 	"compiler": {
-		"version": "0.8.4+commit.c7e474f2"
+		"version": "0.5.17+commit.d19bba13"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_requirement",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_specifications",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_points",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "author",
 				"outputs": [
@@ -20,10 +38,12 @@
 						"type": "address"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "category",
 				"outputs": [
@@ -33,10 +53,12 @@
 						"type": "uint8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "closing_time",
 				"outputs": [
@@ -46,10 +68,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "countdown",
 				"outputs": [
@@ -59,10 +83,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "creation_time",
 				"outputs": [
@@ -72,10 +98,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "field",
 				"outputs": [
@@ -85,10 +113,12 @@
 						"type": "uint8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "id",
 				"outputs": [
@@ -98,10 +128,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "points",
 				"outputs": [
@@ -111,10 +143,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "requirement",
 				"outputs": [
@@ -124,10 +158,12 @@
 						"type": "string"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "reward",
 				"outputs": [
@@ -137,10 +173,12 @@
 						"type": "uint256"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "specifications",
 				"outputs": [
@@ -150,10 +188,12 @@
 						"type": "string"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "status",
 				"outputs": [
@@ -163,10 +203,12 @@
 						"type": "uint8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
 				"name": "technology",
 				"outputs": [
@@ -176,23 +218,16 @@
 						"type": "uint8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
-			"kind": "dev",
-			"methods": {},
-			"version": 1
+			"methods": {}
 		},
 		"userdoc": {
-			"kind": "user",
-			"methods": {},
-			"version": 1
+			"methods": {}
 		}
 	},
 	"settings": {
@@ -201,9 +236,6 @@
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
-		"metadata": {
-			"bytecodeHash": "ipfs"
-		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -212,11 +244,10 @@
 	},
 	"sources": {
 		"contracts/Issue.sol": {
-			"keccak256": "0x5240f806c5ba51d376d3624ca6311db169027cceb19e17c4f192e89a96447778",
-			"license": "MIT",
+			"keccak256": "0xae61a594059849fc2e7b0f4009cbcf9aecb8bfd7b455920f744fafe0cc978abc",
 			"urls": [
-				"bzz-raw://e8a7a98558f1c4b5560ffb241ae31d854586d89fa70a8787e131058f7be15b52",
-				"dweb:/ipfs/QmeCTMP3PANYV4C1YwF9T91qNUhz9eWySXvHSMfGAMJaHe"
+				"bzz-raw://dcd3cd134421993859341e94f8a2d8898a9d757991ca64cac45dea69beb49152",
+				"dweb:/ipfs/Qmf1DcpqWCvauMWpG45zdzV359ydn76N78FRWVhCBaxUHi"
 			]
 		}
 	},
