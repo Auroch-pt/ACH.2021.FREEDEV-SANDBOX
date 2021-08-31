@@ -8,35 +8,25 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_id",
-						"type": "uint256"
-					},
-					{
 						"internalType": "address",
 						"name": "_author",
 						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "author",
+				"name": "createIssue",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "contract Issue",
 						"name": "",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "id",
+				"name": "issueCounter",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -61,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Issue.sol": "Issue"
+			"contracts/Issue.sol": "IssueFactory"
 		},
 		"evmVersion": "london",
 		"libraries": {},

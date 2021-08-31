@@ -1,36 +1,23 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.0;
 
 contract Issue {
     
-    enum Category {CSS, HTML, NEW_FEATURE, BUG_FIX, REFACTOR, PERFORMANCE_IMPROV, TEST, AUDIT, ARCH_DESIGN }
-    enum Field {BACKEND, FRONTEND, BLOCKCHAIN, SQL_DB, AI, BIG_DATA }
-    enum Technology {JAVASCRIPT, TYPESCRIPT, NODE_JS, ANGULAR, REACT, SASS, JAVA, C_PLUS_PLUS, C_SHARP, T_SQL, MY_SQL, AWS}
-    enum IssueStatus {OPEN, COMPLETED}
-    
-    uint public id; //Maybe this should be the hash of the block plus the msg.sender, to generate a unique ID, or something similar.
-    string public requirement;
-    string public specifications;
-    uint public points;
-    uint public reward;
-    
-    Category public category;
-    Field public field;
-    Technology public technology;
-    
+    uint public id;
     address public author;
-    uint public creation_time;
-    uint public closing_time;
-    uint public countdown;
+
+    constructor(uint _id, address _author){
+        id = _id;
+        author = _author;
+    }
+}
+
+contract IssueFactory {
     
-    IssueStatus public status;
+    uint256 public issueCounter;
     
-    constructor(string memory _requirement, string memory _specifications, uint _points) public {
-        author = msg.sender;
-        
-        requirement = _requirement;
-        specifications = _specifications;
-        points = _points;
+    function createIssue(address _author) public returns (Issue){
+        return new Issue(issueCounter++, _author);
     }
 }

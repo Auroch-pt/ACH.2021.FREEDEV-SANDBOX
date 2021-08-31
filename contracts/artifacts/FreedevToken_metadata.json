@@ -381,11 +381,11 @@
 			]
 		},
 		"contracts/FreedevToken.sol": {
-			"keccak256": "0x220447a530db430300d162e1d64285957b0a0a93ab0431f8ceeda7ccfd027c7b",
+			"keccak256": "0x2816ed9b45eefe3e19d3dd6162dae762459945b3b8c402beaceb1536ddd80dcc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://370a3b8c449bb6d2015303c6420e6c89b5c5184e51f7aceb813c3bd678e3f415",
-				"dweb:/ipfs/QmdAEXYrWf6kFPxs8517crBh3E2vWTGEACe18uKzEstVt7"
+				"bzz-raw://7723ef6de3607efed9c60f00e281d8b4346c3c7e2d7d410baace724ad34d3d2a",
+				"dweb:/ipfs/QmTq8mEZ56p2s2EUiLfbQBtqQBxNQkzJuxNCBhFiZSVNux"
 			]
 		}
 	},
