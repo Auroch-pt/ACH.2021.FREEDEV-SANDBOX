@@ -13,15 +13,15 @@
 						"type": "address"
 					},
 					{
-						"internalType": "contract Project",
-						"name": "_project",
+						"internalType": "contract IssueFactory",
+						"name": "_issueFactory",
 						"type": "address"
 					}
 				],
-				"name": "createIssue",
+				"name": "createProject",
 				"outputs": [
 					{
-						"internalType": "contract Issue",
+						"internalType": "contract Project",
 						"name": "",
 						"type": "address"
 					}
@@ -31,7 +31,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "issueCounter",
+				"name": "projectCounter",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -56,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Issue.sol": "IssueFactory"
+			"contracts/Project.sol": "ProjectFactory"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -79,11 +79,11 @@
 			]
 		},
 		"contracts/Project.sol": {
-			"keccak256": "0xedfbc8cbd4a87841f0eb30cd98f834eabff13fb083f00d44920aafde4f13f0e0",
+			"keccak256": "0xcc84d11d2d36c12bf0227f274fa17f4cab26e5a4882c0afef33a75c560e42856",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4167d7f60de732e88bbe203b77f06729f70d5ac745fb9157ff2aa0fdec3019e9",
-				"dweb:/ipfs/QmVX3nyh8usPHMkjhAmEpAptSdwTQfFuyXsD2N6oKyPVZJ"
+				"bzz-raw://c443d75bbbffd35528c62264aca6356b5a07c22a746ac57b6516e94e36763772",
+				"dweb:/ipfs/QmNwCrU2N553wFcmt57CyfjHCwXchBMyh9LFkKjRi7cVSv"
 			]
 		}
 	},
