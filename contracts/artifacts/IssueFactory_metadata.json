@@ -21,9 +21,26 @@
 				"name": "createIssue",
 				"outputs": [
 					{
-						"internalType": "contract Issue",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "author",
+								"type": "address"
+							},
+							{
+								"internalType": "contract Project",
+								"name": "project",
+								"type": "address"
+							}
+						],
+						"internalType": "struct Issue",
 						"name": "",
-						"type": "address"
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -71,19 +88,19 @@
 	},
 	"sources": {
 		"contracts/Issue.sol": {
-			"keccak256": "0xa7cf99dc61aa1c0ed9f9d22b7b84420edcc98936e7f8b7f0fed7fdc3087838be",
+			"keccak256": "0x346c2fe64e601d13ad5a4538dfdae656853a90ae6534e5a6deea2119a269fa0b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://85cc65acad93b7bda21e2711beffb7f5369c251cc63b7b9f38ae07a693b5b474",
-				"dweb:/ipfs/QmYsFLf5XG2rqYnS3hV7762T5BUhydqZaKbhVTs9barQUj"
+				"bzz-raw://ff2a5118225494cdb6761cfcf2da4ded0dcccf9cb2b37dddd44032675e11e4ba",
+				"dweb:/ipfs/QmU4BGMqtweJTii5URKcBmMtLmRbRBvEjksApkMejdnKmE"
 			]
 		},
 		"contracts/Project.sol": {
-			"keccak256": "0xedfbc8cbd4a87841f0eb30cd98f834eabff13fb083f00d44920aafde4f13f0e0",
+			"keccak256": "0xf8e1e7de054cf0d4a37fdf5df0aaa28d52bf51fb86595c47aa35534546064bd2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4167d7f60de732e88bbe203b77f06729f70d5ac745fb9157ff2aa0fdec3019e9",
-				"dweb:/ipfs/QmVX3nyh8usPHMkjhAmEpAptSdwTQfFuyXsD2N6oKyPVZJ"
+				"bzz-raw://f488da3a74d52829565d10491f3f179a882b1ee7f545760bf7f420eae40688c9",
+				"dweb:/ipfs/QmZpCPBeZeePDdD6nUhGnd2LX8hD2s3nUKQqttfhnHQ9iJ"
 			]
 		}
 	},

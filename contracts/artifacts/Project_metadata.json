@@ -47,6 +47,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_issueId",
+						"type": "uint256"
+					}
+				],
+				"name": "deleteIssue",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_allowed",
+						"type": "address"
+					}
+				],
+				"name": "givePermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "id",
 				"outputs": [
@@ -70,8 +102,18 @@
 				"name": "issues",
 				"outputs": [
 					{
-						"internalType": "contract Issue",
-						"name": "",
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "contract Project",
+						"name": "project",
 						"type": "address"
 					}
 				],
@@ -107,19 +149,19 @@
 	},
 	"sources": {
 		"contracts/Issue.sol": {
-			"keccak256": "0xa7cf99dc61aa1c0ed9f9d22b7b84420edcc98936e7f8b7f0fed7fdc3087838be",
+			"keccak256": "0x2c03872832c2b29babb5c9f64acc09b76097c6dc21a94610aed582e25268affd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://85cc65acad93b7bda21e2711beffb7f5369c251cc63b7b9f38ae07a693b5b474",
-				"dweb:/ipfs/QmYsFLf5XG2rqYnS3hV7762T5BUhydqZaKbhVTs9barQUj"
+				"bzz-raw://e134f92a536df726a885bf52f1601833b8221d635b92bc0864008fd7d44af00c",
+				"dweb:/ipfs/QmXrcg5hUQoErha3cVZwBbc7NXoVFjrsWJRu6tkj2vQd9k"
 			]
 		},
 		"contracts/Project.sol": {
-			"keccak256": "0xcc84d11d2d36c12bf0227f274fa17f4cab26e5a4882c0afef33a75c560e42856",
+			"keccak256": "0x8112fe6c10e01b02719bec0492241ffeba76af25a2c73f8611118842dcd40297",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c443d75bbbffd35528c62264aca6356b5a07c22a746ac57b6516e94e36763772",
-				"dweb:/ipfs/QmNwCrU2N553wFcmt57CyfjHCwXchBMyh9LFkKjRi7cVSv"
+				"bzz-raw://245d07465936dcb9a667a6bd3e9444192c0e457c95e2ab5be4070d8fee0daef6",
+				"dweb:/ipfs/QmQFMZWnF8B39MXxej4SeiGQjrukuCSm2jhMKKZcJxnoy3"
 			]
 		}
 	},
