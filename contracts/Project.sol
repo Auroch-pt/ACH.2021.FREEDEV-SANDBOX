@@ -9,7 +9,7 @@ contract Project {
     uint256 public id;
     address public author;
     
-    Issue[] public issues;
+    mapping(uint256 => Issue) public issueMap;
     
     IssueFactory private issueFactory;
     mapping(address => bool) permissionMap;
@@ -21,19 +21,12 @@ contract Project {
     }
     
     function createIssue() public hasPermission {
-        issues.push(issueFactory.createIssue(msg.sender, this));
+        Issue memory issue = issueFactory.createIssue(msg.sender, this);
+        issueMap[issue.id] = issue;
     }
 
-    function deleteIssue(uint256 _issueId) public hasPermission returns(bool success) {
-        //TODO: Fix: this is behaving as a MAP
-        
-        for(uint256 i = 0; i < issues.length; i++) {
-            if (issues[i].id == _issueId) {
-                delete issues[id];
-                return true;
-            }
-        }
-        
+    function updateIssueStatus(uint256 _issueId, Status _status) public hasPermission returns(bool success) {
+        issueMap[_issueId].status = _status;
         return false;
     }
     
@@ -41,6 +34,30 @@ contract Project {
         permissionMap[_allowed] = true;
     }
     
+    function getIssueList(uint256 _numOfIssues) public view returns (Issue[] memory _issueList) {
+        
+        Issue[] memory issueList = new Issue[](_numOfIssues);
+        
+        for (uint256 i = 0; i < _numOfIssues; i++) {
+            issueList[i] = (issueMap[i]);
+        }
+        
+        return issueList;
+    }
+    
+    function getActiveIssueList(uint256 _numOfIssues) public view returns (Issue[] memory _issueList) {
+
+        Issue[] memory issueList = new Issue[](_numOfIssues);
+        
+        for (uint256 i = 0; i < _numOfIssues; i++) {
+            
+            if (issueMap[i].status == Status.ACTIVE) {
+                issueList[i] = (issueMap[i]);
+            }
+        }
+        
+        return issueList;
+    }
     
     modifier onlyAuthor() {
         require (msg.sender == author);
