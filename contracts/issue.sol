@@ -3,19 +3,6 @@
 pragma solidity ^0.8.0;
 
 import "./Project.sol";
-/*
-contract Issue {
-    //TODO: reduce the costs of this approach
-    uint public id;
-    address public author;
-    Project public project;
-
-    constructor(uint _id, address _author, Project _project){
-        id = _id;
-        author = _author;
-        project = _project;
-    }
-}*/
 
 struct Issue {
     uint256 id;
