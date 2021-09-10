@@ -15,9 +15,7 @@ enum Status {ACTIVE, COMPLETE, CANCELLED}
 
 contract IssueFactory {
     
-    uint256 public issueCounter;
-    
-    function createIssue(address _author, Project _project) public returns (Issue memory){
-        return Issue(issueCounter++, _author, _project, Status.ACTIVE);
+    function createIssue(uint256 _id, address _author, Project _project) public pure returns (Issue memory){
+        return Issue(_id, _author, _project, Status.ACTIVE);
     }
 }

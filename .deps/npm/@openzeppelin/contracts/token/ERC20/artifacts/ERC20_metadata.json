@@ -343,7 +343,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			".deps/npm/@openzeppelin/contracts/token/ERC20/ERC20.sol": "ERC20"
+			"localhost/.deps/npm/@openzeppelin/contracts/token/ERC20/ERC20.sol": "ERC20"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -357,7 +357,7 @@
 		"remappings": []
 	},
 	"sources": {
-		".deps/npm/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+		"localhost/.deps/npm/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
 			"keccak256": "0xb03df8481a954604ad0c9125680893b2e3f7ff770fe470e38b89ac61b84e8072",
 			"license": "MIT",
 			"urls": [
@@ -365,7 +365,7 @@
 				"dweb:/ipfs/QmcqjUoFLLMyx7dbwSHUnDBH6aphkVHXWQvQRRev5EAWEh"
 			]
 		},
-		".deps/npm/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+		"localhost/.deps/npm/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
 			"keccak256": "0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a",
 			"license": "MIT",
 			"urls": [
@@ -373,7 +373,7 @@
 				"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL"
 			]
 		},
-		".deps/npm/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+		"localhost/.deps/npm/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
 			"keccak256": "0x83fe24f5c04a56091e50f4a345ff504c8bff658a76d4c43b16878c8f940c53b2",
 			"license": "MIT",
 			"urls": [
@@ -381,7 +381,7 @@
 				"dweb:/ipfs/QmSim72e3ZVsfgZt8UceCvbiSuMRHR6WDsiamqNzZahGSY"
 			]
 		},
-		".deps/npm/@openzeppelin/contracts/utils/Context.sol": {
+		"localhost/.deps/npm/@openzeppelin/contracts/utils/Context.sol": {
 			"keccak256": "0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f",
 			"license": "MIT",
 			"urls": [

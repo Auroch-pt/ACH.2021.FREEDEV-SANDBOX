@@ -10,6 +10,7 @@ contract Project {
     address public author;
     
     mapping(uint256 => Issue) public issueMap;
+    uint256 counter;
     
     IssueFactory private issueFactory;
     mapping(address => bool) permissionMap;
@@ -20,9 +21,10 @@ contract Project {
         issueFactory = _issueFactory;
     }
     
-    function createIssue() public hasPermission {
-        Issue memory issue = issueFactory.createIssue(msg.sender, this);
+    function createIssue() public hasPermission returns (Issue memory _issue) {
+        Issue memory issue = issueFactory.createIssue(counter++ ,msg.sender, this);
         issueMap[issue.id] = issue;
+        return issue;
     }
 
     function updateIssueStatus(uint256 _issueId, Status _status) public hasPermission returns(bool success) {
@@ -34,22 +36,35 @@ contract Project {
         permissionMap[_allowed] = true;
     }
     
-    function getIssueList(uint256 _numOfIssues) public view returns (Issue[] memory _issueList) {
+    function getIssueList() public view returns (Issue[] memory _issueList) {
         
-        Issue[] memory issueList = new Issue[](_numOfIssues);
+        Issue[] memory issueList = new Issue[](counter);
         
-        for (uint256 i = 0; i < _numOfIssues; i++) {
+        for (uint256 i = 0; i < issueList.length; i++) {
             issueList[i] = (issueMap[i]);
         }
         
         return issueList;
     }
     
-    function getActiveIssueList(uint256 _numOfIssues) public view returns (Issue[] memory _issueList) {
-
-        Issue[] memory issueList = new Issue[](_numOfIssues);
+    function getIssueList(uint256 _startingPoint, uint256 _numOfRequestedIssues) public view isWithinLimit(_startingPoint) returns (Issue[] memory _issueList) {
         
-        for (uint256 i = 0; i < _numOfIssues; i++) {
+        //uint256 x = counter - _startingPoint > _numOfRequestedIssues;
+        
+        Issue[] memory issueList = new Issue[](setCounterAsLimit(_numOfRequestedIssues) - _startingPoint);
+
+        for (uint256 i = _startingPoint; i <= issueList.length; i++) {
+            issueList[i - _startingPoint] = (issueMap[i]);
+        }
+        
+        return issueList;//indexes: 1, 2, 3, 4
+    }
+    
+    function getActiveIssueList(uint256 _numOfRequestedIssues) public view returns (Issue[] memory _issueList){
+
+        Issue[] memory issueList = new Issue[](setCounterAsLimit(_numOfRequestedIssues));
+        
+        for (uint256 i = 0; i < issueList.length; i++) {
             
             if (issueMap[i].status == Status.ACTIVE) {
                 issueList[i] = (issueMap[i]);
@@ -57,6 +72,16 @@ contract Project {
         }
         
         return issueList;
+    }
+    
+    function setCounterAsLimit(uint256 _numOfRequestedIssues) private view returns (uint256) {
+        return _numOfRequestedIssues > counter ? counter : _numOfRequestedIssues;
+    }
+    
+    
+    modifier isWithinLimit (uint256 _startingPoint) {
+        require(_startingPoint <= counter, "Starting point is greater than the total issues.");
+        _;
     }
     
     modifier onlyAuthor() {

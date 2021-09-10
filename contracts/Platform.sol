@@ -10,7 +10,7 @@ contract Platform {
     
     IERC20 public token;
     Project[] public projects;
-    
+
     ProjectFactory private projectFactory = new ProjectFactory();
     IssueFactory private issueFactory = new IssueFactory();
 
